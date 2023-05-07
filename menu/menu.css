@@ -1,0 +1,224 @@
+:root {
+    --bg: #ffffff;
+    --primary: #9D8569;
+    --accent: #EAE1D8;
+    --secondary: #252525;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--bg);
+    color: var(--secondary);
+    
+}
+.navbar {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    filter: drop-shadow(0 0.2rem 4px rgb(0, 0, 0, 0.2));
+}
+.navbar .navbar-logo {
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+.navbar .navbar-nav a {
+    color: var(--secondary);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+    transition: linear 0.2s;
+}
+
+.navbar .navbar-nav a::after {
+    content: ' ';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: linear 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: var(--secondary);
+    margin: 0 0.5rem;
+    transition: linear 0.2s;
+}
+.navbar .navbar-extra a:hover{
+    color: var(--primary);
+}
+#hamburger-menu{
+    display: none;
+}
+
+
+/* styling menu */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menus-area {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+  color: #fff;
+}
+.section-title {
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 60px;
+}
+.section-title h4 {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.menus {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu-items {
+  flex-basis: 32%;
+}
+.title {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.single-menu {
+  background-color: #333;
+  border: 1px solid #ddd;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  transition: .3s;
+  margin-bottom: 30px;
+}
+.single-menu span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--secondary);
+  background-color: var(--accent);
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 15px 0 0 0;
+}
+.single-menu img {
+  max-width: 80px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  transition: .3s;
+}
+.single-menu h4 {
+  border-bottom: 1px dashed #ddd;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+.single-menu a {
+  display: inline-block;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.single-menu:hover img {
+  border-radius: 50%;
+}
+.single-menu:hover {
+  border-color: var(--primary);
+  border-radius: 7px;
+}
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top:100%;
+        right:-100%;
+        background-color: #252525;
+        width:30rem;
+        height: 100vh;
+        transition: linear 0.3s;
+    }
+    .navbar .navbar-nav.active {
+        right:0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1,5rem;
+        padding:0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover:after {
+        transform:scaleX(0.2);
+    }
+    .container{
+        width: 350px;
+      }
+      .section-title h4 {
+        font-size: 34px;
+        line-height: 50px;
+      }
+      .menu-items {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+      }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}

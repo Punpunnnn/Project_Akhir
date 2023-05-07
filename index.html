@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warteg XYZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Warteg <span>XYZ</span></a>
+        <div class="navbar-nav">
+            <a href="#">Home</a>
+            <a href="menu/menu.html">Menu</a>
+            <a href="#about">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="login"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+    <section class="landing" id="home">
+        <main class="content">
+            <h1>Sajian Lezat, Kenangan Tak Terlupakan</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ratione.</p>
+            <a href="menu/menu.html" class="cta">See Menu</a>
+        </main>
+    </section>
+
+    <section class="best" id="menu">
+        <div class="subtitle">
+            <h1>Our Best Pick</h1>
+            <p> Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="carousel">
+            <div>
+              <img src="Assets/1.png" alt="">
+            </div>
+            <div>
+              <img src="Assets/2.png" alt="">
+            </div>
+             <div>
+              <img src="Assets/1.png" alt="">
+            </div>
+            <div>
+              <img src="Assets/2.png" alt="">
+            </div>
+             <div>
+              <img src="Assets/1.png" alt="">
+            </div>
+            <div>
+              <img src="Assets/2.png" alt="">
+            </div>
+          </div>
+    </section>
+
+    <section class="about" id="about">
+    <div class="grid">
+        <div class="image1"></div>
+        <div class="history">
+            <h1>About Us</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quaerat assumenda numquam vitae doloribus. 
+                Aut tenetur consequatur libero sed explicabo natus!</p>
+            <a href="#" class="cta">Read More</a>
+        </div>
+        <div class="book">
+            <h1> Book Now</h1>
+            <form>
+                <input type="text" class="field" placeholder="Name">
+                <input type="number" class="field" placeholder="Number Of Guests">
+                <input type="date" class="field" placeholder="Date"></form>
+                <a onclick="pesan()" href="#" class="cta">Book</a>
+        </div>
+
+        <div class="image2"></div>          
+    </div>
+    </section>
+    <script>
+        function pesan() {
+            alert("Successfully Booking");
+        }
+        feather.replace()
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

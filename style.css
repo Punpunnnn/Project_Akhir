@@ -1,0 +1,290 @@
+:root {
+    --bg: #ffffff;
+    --primary: #9D8569;
+    --accent: #EAE1D8;
+    --secondary: #252525;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--bg);
+    color: var(--secondary);    
+}
+.navbar {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    filter: drop-shadow(0 0.2rem 4px rgb(0, 0, 0, 0.2));
+}
+.navbar .navbar-logo {
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+.navbar .navbar-nav a {
+    color: var(--secondary);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+    transition: linear 0.2s;
+}
+
+.navbar .navbar-nav a::after {
+    content: ' ';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: linear 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: var(--secondary);
+    margin: 0 0.5rem;
+    transition: linear 0.2s;
+}
+.navbar .navbar-extra a:hover{
+    color: var(--primary);
+}
+#hamburger-menu{
+    display: none;
+}
+
+/* landing section */
+.landing {
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(Assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.landing .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+.landing .content h1 {
+    margin-top: 3;
+    font-size: 5em;
+    color: var(--secondary);
+    line-height: 1.2;
+}
+.landing .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    color: var(--secondary);
+}
+.landing .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.3);
+}
+.best {
+    margin-top: 1rem;
+    padding-top: 7rem;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+}
+.best .subtitle h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary);
+}
+.best .subtitle p {
+    font-size: 1rem;
+    text-align: center;
+}
+.carousel {
+    padding-top: 3rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1)))/var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.carousel > * {
+    aspect-ratio: 4 / 3;
+}
+.carousel img {
+    width: 75%;
+    height: 75%;
+    justify-content: center;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+
+/* about */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    max-width: 1000px;
+    background-color: var(--bg);
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid div {
+    flex-basis: 50%;
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.grid .image1 {
+    background-image: url(Assets/history.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.grid .history {
+    display: inline;
+    background-color: var(--accent);
+    padding: 4rem 3rem 4rem 4rem;
+}
+.grid .history .cta {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    border-style: solid;
+}
+.grid .history h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.grid .history p {
+    padding: 3rem 4rem 2rem 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: black;
+}
+.grid .image2 {
+    background-image: url(Assets/1.jpg);
+    background-size: cover;
+}
+.book {
+    background-color: #ceaada;
+    padding: 4rem ;
+}
+.book h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.book .field {
+    background: transparent;
+    height: 2rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+::placeholder, input {
+    padding: 1rem 1rem 1rem 0.3rem;
+    color: #000000;
+    font-size: 1rem;
+}
+.book .cta {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    border-style: solid;
+}
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top:100%;
+        right:-100%;
+        background-color: #252525;
+        width:30rem;
+        height: 100vh;
+        transition: linear 0.3s;
+    }
+    .navbar .navbar-nav.active {
+        right:0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1,5rem;
+        padding:0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover:after {
+        transform:scaleX(0.2);
+    }
+    .grid {
+        max-width: 100%;
+    }
+    .grid div {
+        flex-basis: 100%;
+    }
+    .grid .history {
+        height: 95;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}

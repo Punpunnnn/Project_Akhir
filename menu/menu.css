@@ -90,7 +90,7 @@ body {
   background-position: center;
   position: relative;
   z-index: 2;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   color: #fff;
 }
 .section-title {
@@ -140,7 +140,7 @@ body {
   border-radius: 15px 0 0 0;
 }
 .single-menu img {
-  max-width: 80px;
+  max-width: 150px;
   border: 1px solid #ddd;
   padding: 3px;
   transition: .3s;
@@ -158,12 +158,114 @@ body {
   text-transform: uppercase;
   margin-top: 25px;
 }
+.single-menu ul {
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+.single-menu p {
+    margin-bottom: 2.5rem;
+}
 .single-menu:hover img {
   border-radius: 50%;
 }
 .single-menu:hover {
   border-color: var(--primary);
   border-radius: 7px;
+}
+
+/* Footer */
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+  padding-bottom: 50px;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+footer{
+    padding: 30px 0 0 0;
+    margin-top: 2rem;
+}
+.footer-col{
+   width: 33%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+    color: var(--secondary);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #ceaada;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color:var(--secondary);
+	text-decoration: none;
+	font-weight: 400;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ceaada;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: var(--secondary);
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #ceaada  ;
+	background-color: var(--secondary);
+}
+footer .text {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #212529;
+
+}
+footer .text span a{
+  font-weight: 500;
+  color: #212529;
+  transition: ease 0.5s;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+  color: #ceaada;
 }
 /* laptop */
 @media (max-width: 1366px) {
@@ -215,8 +317,17 @@ body {
         flex-basis: 100%;
         margin-bottom: 30px;
       }
+      .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
 
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
 @media (max-width: 450px) {
     html {
         font-size: 55%;

@@ -10,20 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">    
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="navbar-logo">Warteg <span>XYZ</span></a>
+        <a href="#" class="navbar-logo">RM Salero <span>Minang</span></a>
         <div class="navbar-nav">
             <a href="#">Home</a>
             <a href="menu/menu.html">Menu</a>
             <a href="#about">About Us</a>
-            <a href="">Contact Us</a>
         </div>
         <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="login"><i data-feather="shopping-cart"></i></a>
-            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            <a href="" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
     </nav>
 
@@ -74,20 +72,53 @@
         </div>
         <div class="book">
             <h1> Book Now</h1>
-            <form>
-                <input type="text" class="field" placeholder="Name">
-                <input type="number" class="field" placeholder="Number Of Guests">
-                <input type="date" class="field" placeholder="Date"></form>
-                <a onclick="pesan()" href="#" class="cta">Book</a>
+            <form action="connect.php" method="post">
+                <input type="text" class="field" placeholder ="your name" name="name">
+                <input type="number" class="field" placeholder="Number Of Guests (max 9)" name="guest">
+                <input type="date" class="field" placeholder="Date" name="date">
+                <input type="submit" name="btn" class="cta" value="Book">
+            </form>
         </div>
 
         <div class="image2"></div>          
     </div>
     </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="mailto: sabriharfa@gmail.com">Email</a></li>
+                        <li><a href='#'>Whatsapp</a></li>
+                        <li><a href='#'>+62 848-3490-243</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href='https://goo.gl/maps/njZ8i4oh6nccPSMR9'>Jalan Kenangan, RT.002/RW.018,<br> Jakasampurna, Kota Bekasi, Jawa Barat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href='#'><i class="fab fa-instagram"></i></a>
+                        <a href='#'><i class="fab fa-facebook"></i></a>
+                        <a href='#'><i class="fab fa-twitter"></i></a>
+                        <a href='#'><i class="fab fa-tiktok"></i></a>
+                        <a href='#'><i class="fab fa-blackberry"></i></a>
+                        <a href='#'><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <span>Created By <a href="#home">Kelompok 4</a></span>
+          </div>
+    </footer>
     <script>
-        function pesan() {
-            alert("Successfully Booking");
-        }
         feather.replace()
     </script>
     <script src="script.js"></script>
